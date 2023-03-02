@@ -1,0 +1,82 @@
+/** @format */
+
+.SideBar {
+  flex: 1;
+
+  height: calc(100vh-50px);
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  top: 50px;
+}
+.sidebarWrapper {
+  padding: 50px;
+  padding-left: 30px;
+  padding-top: 20px;
+  color: #555;
+}
+.sidebarMenu {
+  margin-bottom: 10px;
+  margin-left: -15px;
+}
+.sideBarTitle {
+  font-size: 13px;
+  color: rgb(137, 149, 160);
+}
+.sideBarList {
+  list-style: none;
+  padding: 5px;
+}
+.SideBarListItem {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.SideBarListItem.active,
+.SideBarListItem:hover {
+  background-color: rgb(225, 222, 222);
+}
+.sidebarIcon {
+  margin-right: 5px;
+  font-size: 20px !important;
+}
+.cardd {
+  -webkit-box-shadow: -5px 10px 5px 0px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: -5px 10px 5px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: -5px 10px 5px 0px rgba(0, 0, 0, 0.51);
+  margin: 40px;
+}
+.leftt {
+  background-color: rgb(195, 93, 93);
+  flex: 1.5;
+  min-height: 100vh;
+  /* max-height: 100vh; */
+  display: flex;
+  justify-content: center;
+}
+.righht {
+  flex: 3;
+}
+.input_box {
+  border-radius: 10px;
+  background-color: rgba(232, 232, 232, 1);
+  border: none;
+  min-width: 520px;
+  min-height: 40px;
+}
+.login_button {
+  border-radius: 10px;
+  background-color: rgb(195, 93, 93);
+  border: none;
+  min-width: 220px;
+  min-height: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 16px;
+}
+@media only screen and (max-width: 600px) {
+}
