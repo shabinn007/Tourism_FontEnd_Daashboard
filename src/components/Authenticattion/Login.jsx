@@ -5,26 +5,11 @@ import { Link, useNavigate } from "react-router-dom";
 import img from "../pics/compass.png";
 import "../../App.css";
 import { Form } from "reactstrap";
-import { useDispatch } from "react-redux";
-import { login } from "../../store/api/api";
+// import { useDispatch } from "react-redux";
+// import { login } from "../../store/api/api";
 // import { login } from "../../store/authentication/authenticationSlice";
 // import { useState } from "react";
-
 export default function Login() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const handlesubmit = e => {
-    e.preventDefault();
-    dispatch(login({ cridential: { password, email }, navigate }));
-  };
-  // const handleChange = e => {
-  //   setData({
-  //     ...data,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
   return (
     <div className="d-flex">
       <div className="leftt">
@@ -65,7 +50,7 @@ export default function Login() {
           </Link>
         </p>
         <div className="main_content" style={{ marginTop: "100px" }}>
-          <Form onSubmit={handlesubmit}>
+          <Form>
             {/* <Form> */}{" "}
             <h2 className="text-center" style={{ marginTop: "50px" }}>
               Sign in to XPLOR
@@ -86,8 +71,8 @@ export default function Login() {
                   name="email"
                   type="email"
                   // onChange={handleChange}
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
+                  // value={email}
+                  // onChange={e => setEmail(e.target.value)}
                 />
               </div>
               <div
@@ -108,8 +93,8 @@ export default function Login() {
                 className="input_box"
                 type="text"
                 name="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
+                // value={password}
+                // onChange={e => setPassword(e.target.value)}
               />
               <div className="button" style={{ paddingTop: "50px" }}>
                 <button className="login_button" type="submit">

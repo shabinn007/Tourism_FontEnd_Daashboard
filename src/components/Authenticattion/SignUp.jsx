@@ -3,40 +3,13 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../pics/compass.png";
-import "../../App.css";
-import { register } from "../../store/api/api";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+// import "../../App.css";
+// import { register } from "../../store/api/api";
+// import { useState } from "react";
+// import { useDispatch } from "react-redux";
 import { Form } from "reactstrap";
 
 export default function Signup() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const [username, setUsername] = useState();
-  // const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  // const { isAuthenticated, loading } = useSelector(state => state.signup);
-  // const [signupData, setSignupData] = useState({
-  //   username: "",
-  //   email: "",
-  //   password: "",
-  // });
-
-  // const [user, setUser] = useState();
-  // console.log("user", user);
-  const handlesubmit = e => {
-    e.preventDefault();
-    // dispatch(register({ signupData, navigate }));
-    dispatch(register({ cridential: { username, password }, navigate }));
-  };
-  // const handleChange = e => {
-  //   e.preventDefault();
-  //   setUser({
-  //     ...user,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
   return (
     <div className="d-flex">
       <div className="leftt">
@@ -73,7 +46,7 @@ export default function Signup() {
           </Link>
         </p>
         <div className="main_content" style={{ marginTop: "100px" }}>
-          <Form onSubmit={handlesubmit}>
+          <Form>
             <h2 className="text-center" style={{ marginTop: "50px" }}>
               Sign up to XPLOR
             </h2>
@@ -93,14 +66,14 @@ export default function Signup() {
                   className="input_box"
                   type="text"
                   name="username"
-                  value={username}
+                  // value={username}
                   // onChange={handleChange}
                   // onChange={e =>
                   //   setSignupData({ ...signupData, username: e.target.value })
                   // }
                   // onChange={e => setEmail(e.target.value)}
 
-                  onChange={e => setUsername(e.target.value)}
+                  // onChange={e => setUsername(e.target.value)}
                 />
               </div>
 
@@ -139,12 +112,12 @@ export default function Signup() {
                 className="input_box"
                 type="password"
                 name="password"
-                value={password}
+                // value={password}
                 // onChange={handleChange}
                 // onChange={e =>
                 //   setSignupData({ ...signupData, password: e.target.value })
                 // }
-                onChange={e => setPassword(e.target.value)}
+                // onChange={e => setPassword(e.target.value)}
 
                 // onChange={e => setPassword(e.target.value)}
               />
